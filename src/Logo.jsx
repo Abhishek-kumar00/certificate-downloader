@@ -22,14 +22,14 @@ export default function Component({ firstName, lastName, courseName, completeDat
       <div className="flex-grow w-full flex">
         {/* Left strip */}
         <div className="w-1/6 h-full">
-          <img src="/src/assets/strip.png" alt="Linkedin-strip" className="h-full w-full object-cover" />
+          <img src="/assets/strip.png" alt="Linkedin-strip" className="h-full w-full object-cover" />
         </div>
 
         {/* Main content */}
         <div className="w-5/6 p-8 flex flex-col justify-between main-content">
           <div className="flex flex-col items-center">
             <div className="mb-8">
-              <img src="/src/assets/Learning.png" alt="linkedin-image" className="h-16" />
+              <img src="/assets/Learning.png" alt="linkedin-image" className="h-16" />
             </div>
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold mb-2 ">Certificate of Completion</h2>
@@ -51,7 +51,7 @@ export default function Component({ firstName, lastName, courseName, completeDat
 
           <div className="flex justify-between items-end">
             <div className="flex flex-col items-start">
-              <img src="/src/assets/signature-image.jpeg" alt="" className="h-16 mb-2" />
+              <img src="/assets/signature-image.jpeg" alt="" className="h-16 mb-2" />
               <h3 className="text-base">VP, Learning Content at LinkedIn</h3>
             </div>
             <div className="h-16 w-px bg-gray-300 mx-8"></div>
