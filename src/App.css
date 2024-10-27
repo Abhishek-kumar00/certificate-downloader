@@ -42,7 +42,7 @@
 }
 input{
   border: none;
-  border-radius: 10%;
+  
 }
 h2{
   color:#737373
@@ -50,5 +50,9 @@ h2{
 h3{
   color:#737373
 }
+.form-element {
+  margin-bottom: 18rem; /* Adjust the spacing as needed */
+}
+
 
 

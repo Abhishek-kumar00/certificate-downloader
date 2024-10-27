@@ -14,36 +14,34 @@ export default function Component({ onFormSubmit }) {
   }
 
   return (
-    <div className=''>
-      <label htmlFor="fname">
-        <b>First Name</b>
+    <div className='text-2xl rounded-none flex-col justify-between '>
+      <label htmlFor="fname" className="form-element p-4">
+        <b className=''>First Name</b>
         <br />
-        <br />
-        <input type="text" 
+        <input type="text"
+        className="text-sm h-9 w-full " 
         id="fname" 
         name="fname"
         value={fname}
         onChange={(e) => setFname(e.target.value)} />
       </label>
       <br />
-      <br />
-      <label htmlFor="lname">
+      <label htmlFor="lname" className="form-element p-4">
         <b>Last Name</b>
         <br />
-        <br />
-        <input type="text" 
+        <input type="text"
+        className="text-sm h-9 w-full " 
         id="lname" 
         name="lname"
         value={lname}
         onChange={(e)=>setLname(e.target.value)} />
       </label>
       <br />
-      <br />
-      <label htmlFor="dateOfCompletion">
+      <label htmlFor="dateOfCompletion" className="form-element p-4">
         <b>Date of completion:</b>
         <br />
-        <br />
         <input placeholder="Example: October 26,2024" 
+        className="text-sm h-9 w-full "
         type="text" 
         id="dateOfCompletion" 
         name="dateOfCompletion" 
@@ -52,12 +50,11 @@ export default function Component({ onFormSubmit }) {
         />
       </label>
       <br />
-      <br />
-      <label htmlFor="dateOfDuration">
+      <label htmlFor="dateOfDuration" className="form-element p-4">
         <b>Course Duration:</b>
         <br />
-        <br />
         <input placeholder="Example: 6 months"
+        className="text-sm h-9 w-full"
         type="text" 
         id="length" 
         name="length"
@@ -66,12 +63,11 @@ export default function Component({ onFormSubmit }) {
         />
       </label>
       <br />
-      <br />
-      <label htmlFor="courseTraining">
+      <label htmlFor="courseTraining" className="form-element p-4">
         <b>Course Name:</b>
         <br />
-        <br />
-        <input placeholder="Example: Full Stack Web Development" 
+        <input placeholder="Example: Full Stack Web Development"
+        className="text-sm h-9 w-full" 
         type="text" 
         id="courseTraining" 
         name="courseTraining"
