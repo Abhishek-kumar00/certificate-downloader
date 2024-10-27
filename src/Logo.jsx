@@ -1,35 +1,39 @@
-
+import React from 'react';
 import html2canvas from 'html2canvas';
-export default function Component({ firstName, lastName, courseName, completeDate, durationDate }) {
+// Import the images
+import stripImage from './assets/images/strip.png';
+import learningImage from './assets/images/Learning.png';
+import signatureImage from './assets/images/signature-image.jpeg';
 
-    const downloadImage=()=>{
-      const element=document.getElementById('certificate-wrapper')
+export default function Logo({ firstName, lastName, courseName, completeDate, durationDate }) {
+  const downloadImage = () => {
+    const element = document.getElementById('certificate-wrapper');
 
-      html2canvas(element)
-      .then((canvas)=>{
-        const link=document.createElement('a');
-        link.href=canvas.toDataURL('image/png');
-        link.download='certificate.png';
+    html2canvas(element)
+      .then((canvas) => {
+        const link = document.createElement('a');
+        link.href = canvas.toDataURL('image/png');
+        link.download = 'certificate.png';
         link.click();
       })
-      .catch((error)=>{
-        console.error('Error converting to image:',error);
+      .catch((error) => {
+        console.error('Error converting to image:', error);
       });
-    };
-  
+  };
+
   return (
-    <div className="flex flex-col h-screen bg-white text-gray-800" id='certificate-wrapper'>
+    <div className="flex flex-col h-screen bg-white text-gray-800" id="certificate-wrapper">
       <div className="flex-grow w-full flex">
         {/* Left strip */}
         <div className="w-1/6 h-full">
-          <img src="./src/assets/strip.png" alt="Linkedin-strip" className="h-full w-full object-cover" />
+          <img src={stripImage} alt="Linkedin-strip" className="h-full w-full object-cover" />
         </div>
 
         {/* Main content */}
         <div className="w-5/6 p-8 flex flex-col justify-between main-content">
           <div className="flex flex-col items-center">
             <div className="mb-8">
-              <img src="./src/assets/Learning.png" alt="linkedin-image" className="h-16" />
+              <img src={learningImage} alt="linkedin-image" className="h-16" />
             </div>
             <div className="text-center mb-8">
               <h2 className="text-4xl font-bold mb-2 ">Certificate of Completion</h2>
@@ -37,7 +41,7 @@ export default function Component({ firstName, lastName, courseName, completeDat
             </div>
             <div className="text-center mb-8">
               <div className="text-base ">
-              <h1 className="text-5xl font-semibold mb-2 text-gray-600">{courseName}</h1>
+                <h1 className="text-5xl font-semibold mb-2 text-gray-600">{courseName}</h1>
                 <h3>Course completed on {completeDate} • {durationDate}</h3>
               </div>
             </div>
@@ -51,7 +55,7 @@ export default function Component({ firstName, lastName, courseName, completeDat
 
           <div className="flex justify-between items-end">
             <div className="flex flex-col items-start">
-              <img src="./src/assets/signature-image.jpeg" alt="" className="h-16 mb-2" />
+              <img src={signatureImage} alt="Signature" className="h-16 mb-2" />
               <h3 className="text-base">VP, Learning Content at LinkedIn</h3>
             </div>
             <div className="h-16 w-px bg-gray-300 mx-8"></div>
@@ -79,5 +83,5 @@ export default function Component({ firstName, lastName, courseName, completeDat
         </button>
       </div>
     </div>
-  )
+  );
 }
