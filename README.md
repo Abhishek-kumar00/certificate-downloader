@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 # summer training certificate downloader 
 This is a certificate downloader project for you summer traning project you can download a free course certificate of with the Linkedin  
-# NOTE:- please note that this is a fun project and it shoulf not be used for  any means of Cheating or use should not be used for any unethical activity 
+# NOTE:- please note that this is a fun project and it should not be used for  any means of Cheating or use should not be used for any unethical activity 
